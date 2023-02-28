@@ -10,7 +10,7 @@ path = './'
 
 def create():
     folder_name = str(sys.argv[1])
-    os.makedirs(path + str(folder_name))
+    os.makedirs(path + folder_name)
     github_user = Github(username, password).get_user()
     repo = github_user.create_repo(folder_name)
     run(f"""
